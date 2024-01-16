@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/raku-taku/' : "" ,
+  base: 'raku-toku',
   plugins: [
     vue(),
   ],
@@ -15,6 +15,8 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'docs'
+    outDir: 'docs',
   },
+  assetsDir: './',
+  publicPath: './',
 })

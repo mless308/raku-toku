@@ -1,0 +1,17 @@
+#page-selector {
+    display: flex;
+
+    .page-btn {
+        width: 50%;
+        padding: 3px 10px;
+        text-align: center;
+        background-color: $cBtn;
+        transition: all 0.5s;
+        border: 1px solid $cBorder1;
+        border-top: none;
+
+        &:hover {
+            background-color: $cBtnHover;
+        }
+    }
+}

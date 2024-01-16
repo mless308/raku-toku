@@ -2,6 +2,7 @@
   <div id="app">
     <AppHeader />
     <div id="main">
+      <router-link :to="{name: 'ItemList'}">ItemList</router-link>
       <router-view />
     </div>
   </div>

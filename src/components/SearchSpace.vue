@@ -141,10 +141,12 @@ export default {
       }
       this.$router.push(
         {
-          name: "ItemList",
+          name: "Home",
           query: {
+            page: this.$route.query.page,
             genreId: this.selectGenreId,
-            keyword: this.inputWord
+            keyword: this.inputWord,
+            pageN: 1
           }
         }
       )

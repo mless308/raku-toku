@@ -5,8 +5,6 @@
     <div id="main">
       <Home v-if="page=='home'" />
       <ItemList v-else-if="page=='itemlist'" />
-      <!-- <router-link :to="{name: 'ItemList'}">ItemList</router-link> -->
-      <!-- <router-view /> -->
     </div>
   </div>
 </template>
@@ -34,7 +32,6 @@ export default {
   watch: {
   },
   async created () {
-    console.log(await this.getRakutenItem("タオル"))
   },
   computed: {
     page: function () {

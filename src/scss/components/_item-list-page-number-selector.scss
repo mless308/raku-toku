@@ -1,0 +1,41 @@
+#item-list-page-number-selector {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $hItemListPageNumberSelector;
+    padding: 10px;
+    background-color: $cCover1;
+    color: $cFn1;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .number-space {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 70px;
+    }
+
+    .number-max-space {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70px;
+    }
+
+    .chevron-space {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+    }
+}

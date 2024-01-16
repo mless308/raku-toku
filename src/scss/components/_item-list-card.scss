@@ -1,0 +1,52 @@
+.item-list-card {
+    display: flex;
+    border: 1px solid $cBorder1;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+
+    .item-list-card-img-space {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+
+        .nothing-image {
+            // position: absolute;
+            color: $cGray1;
+        }
+    }
+
+    .item-list-card-info-space {
+        width: 100%;
+        padding: 10px;
+
+        .item-list-card-item-name {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .item-list-card-info-space-in {
+            padding: 10px;
+        }
+
+        .item-list-card-option-space {
+            display: flex;
+
+            .item-list-card-option-icon {
+                padding: 5px;
+                font-size: 10px;
+                border-radius: 5px;
+                margin: 5px;
+            }
+
+            .item-list-card-option-asuraku {
+                background-color: blue;
+                color: white;
+            }
+        }
+    }
+}

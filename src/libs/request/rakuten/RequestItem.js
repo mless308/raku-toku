@@ -7,14 +7,21 @@ const REQUEST_BASE_URL = `${BASE_URL}?format=json&affiliateId=${AFFILIATE_ID}&ap
 
 export default {
     methods: {
-        getRakutenItem: async function (keyword) {
-            if (keyword) {
-                const url = `${REQUEST_BASE_URL}&keyword=${keyword}`
+        getRakutenItem: async function ({keyword=null, genreId=0, page=1}) {
+            if (keyword || genreId) {
+                let url = `${REQUEST_BASE_URL}&page=${page}`
+                console.log(keyword, genreId)
+                if (genreId) {
+                    url += `&genreId=${genreId}`
+                }
+                if (keyword) {
+                    url += `&keyword=${keyword}`
+                }
                 const response = await axios.get(url)
                 return response.data
             }
 
-            alert("検索ワードを入力してください。")
+            // alert("検索ワードを入力してください。")
             return false
         }
     },

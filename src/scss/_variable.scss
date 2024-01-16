@@ -1,10 +1,18 @@
+$cWhite: white;
 $cGray1: rgb(180, 180, 180);
 $cGray2: rgb(220, 220, 220);
 $cGray3: rgb(245, 245, 245);
+$cTransparent1: rgba(0, 0, 0, 0.7);
 
 $cBg1: $cGray3;
 
+$cFn1: $cWhite;
+
 $cBorder1: $cGray1;
+
+$cCover1: $cTransparent1;
 
 $cBtn: $cGray2;
 $cBtnHover: $cGray1;
+
+$hItemListPageNumberSelector: 50px;

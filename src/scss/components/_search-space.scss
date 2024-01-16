@@ -1,0 +1,48 @@
+#search-space {
+    padding: 10px;
+    background-color: $cBg1;
+    border-radius: 8px;
+
+    .search-space-one {
+        padding: 5px;
+
+        .word-space {
+            display: flex;
+
+            .word-input-index {
+                padding-right: 5px;
+                width: 120px;
+            }
+
+            .word-input {
+                width: 100%;
+            }
+        }
+
+        .genre-space {
+            display: flex;
+            padding: 3px;
+
+            .genre-index {
+                padding-right: 5px;
+                width: 70px;
+            }
+
+            .genre-select {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+
+    .search-btn-space-one {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+
+        .btn {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}

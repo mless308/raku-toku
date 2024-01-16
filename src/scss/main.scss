@@ -1,0 +1,41 @@
+@import "./variable";
+@import "./components/app-header";
+@import "./components/search-space";
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: left;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    width: 100%;
+    max-width: 800px;
+
+    #main {
+        padding: 15px 5px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 15px;
+    background-color: $cBtn;
+    border-radius: 8px;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: $cBtnHover;
+    }
+}
+
+.click {
+    cursor: pointer;
+}

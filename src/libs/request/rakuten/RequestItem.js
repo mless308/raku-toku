@@ -7,9 +7,9 @@ const REQUEST_BASE_URL = `${BASE_URL}?format=json&affiliateId=${AFFILIATE_ID}&ap
 
 export default {
     methods: {
-        getRakutenItem: async function ({keyword=null, genreId=0, page=1}) {
+        getRakutenItem: async function ({keyword=null, genreId=0, page=1, sort="standard"}) {
             if (keyword || genreId) {
-                let url = `${REQUEST_BASE_URL}&page=${page}`
+                let url = `${REQUEST_BASE_URL}&page=${page}&sort=${sort.replace("+", "%2B")}`
                 console.log(keyword, genreId)
                 if (genreId) {
                     url += `&genreId=${genreId}`

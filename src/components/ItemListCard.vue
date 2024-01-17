@@ -6,7 +6,7 @@
       rel="noopener noreferrer"
     >
       <div class="item-list-card-img-space">
-        <img
+        <!-- <img
           v-if="item.imageFlag && this.item.mediumImageUrls.length"
           :src="this.item.mediumImageUrls[0].imageUrl"
           :alt="this.item.mediumImageUrls[0].imageUrl"
@@ -17,7 +17,7 @@
           :width="30"
           :height="30"
           class="nothing-image"
-        />
+        /> -->
       </div>
     </a>
     <div class="item-list-card-info-space">

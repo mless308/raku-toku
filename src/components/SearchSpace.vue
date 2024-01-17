@@ -146,7 +146,8 @@ export default {
             page: this.$route.query.page,
             genreId: this.selectGenreId,
             keyword: this.inputWord,
-            pageN: 1
+            pageN: 1,
+            sort: this.$route.query.sort ? this.$route.query.sort : "standard"
           }
         }
       )

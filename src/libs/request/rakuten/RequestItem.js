@@ -7,7 +7,7 @@ const REQUEST_BASE_URL = `${BASE_URL}?format=json&affiliateId=${AFFILIATE_ID}&ap
 
 export default {
     methods: {
-        getRakutenItem: async function ({keyword=null, genreId=0, page=1, sort="standard"}) {
+        getRakutenItem: async function ({keyword=null, genreId=0, page=1, sort="standard", priceMin=null, priceMax=null}) {
             if (keyword || genreId) {
                 let url = `${REQUEST_BASE_URL}&page=${page}&sort=${sort.replace("+", "%2B")}`
                 console.log(keyword, genreId)
@@ -17,6 +17,13 @@ export default {
                 if (keyword) {
                     url += `&keyword=${keyword}`
                 }
+                if (priceMin) {
+                    url += `&minPrice=${priceMin}`
+                }
+                if (priceMax) {
+                    url += `&maxPrice=${priceMax}`
+                }
+                console.log(url)
                 const response = await axios.get(url)
                 return response.data
             }

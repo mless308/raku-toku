@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app-in">
     <AppHeader />
     <PageSelector />
     <div id="main">

@@ -79,7 +79,9 @@ export default {
             genreId: this.$route.query.genreId,
             keyword: this.$route.query.keyword,
             pageN: 1,
-            sort: this.selectSort
+            sort: this.selectSort,
+            priceMin: this.$route.query.priceMin,
+            priceMax: this.$route.query.priceMax,
           }
         }
       )

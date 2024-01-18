@@ -50,7 +50,10 @@ export default {
             page: this.$route.query.page,
             genreId: this.$route.query.genreId,
             keyword: this.$route.query.keyword,
-            pageN: pageNuber
+            pageN: pageNuber,
+            sort: this.$route.query.sort,
+            priceMin: this.$route.query.priceMin,
+            priceMax: this.$route.query.priceMax,
           }
         }
       )

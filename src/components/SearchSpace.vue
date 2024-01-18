@@ -68,6 +68,16 @@
         </div>
       </div>
     </div>
+    <div class="search-space-one">
+      <div class="search-space-one">
+        <div>価格帯：</div>
+        <div class="price-space">
+          <input v-model="priceMin" type="number" step="1" placeholder="最小価格">円
+          ～
+          <input v-model="priceMax" type="number" step="1" placeholder="最大価格">円
+        </div>
+      </div>
+    </div>
     <div class="search-btn-space-one">
       <div
         class="btn click"
@@ -91,7 +101,9 @@ export default {
       selectChildGenreId: 0,
       grandchildGenreIds: [],
       selectGrandchildGenreId: 0,
-      inputWord: ""
+      inputWord: "",
+      priceMin: undefined,
+      priceMax: undefined
     }
   },
   async created () {
@@ -139,6 +151,18 @@ export default {
         alert("検索ワードか検索区分を選択してください。")
         return
       }
+      if (this.priceMin) {
+        if (!Number.isInteger(this.priceMin)) {
+          alert("価格帯を設定する場合は、整数を設定してください。")
+          return
+        }
+      }
+      if (this.priceMax) {
+        if (!Number.isInteger(this.priceMax)) {
+          alert("価格帯を設定する場合は、整数を設定してください。")
+          return
+        }
+      }
       this.$router.push(
         {
           name: "Home",
@@ -147,7 +171,9 @@ export default {
             genreId: this.selectGenreId,
             keyword: this.inputWord,
             pageN: 1,
-            sort: this.$route.query.sort ? this.$route.query.sort : "standard"
+            sort: this.$route.query.sort ? this.$route.query.sort : "standard",
+            priceMin: this.priceMin,
+            priceMax: this.priceMax,
           }
         }
       )

@@ -1,5 +1,7 @@
 <template>
-  <div id="header">Raku Toku</div>
+  <div id="header">
+    <div id="header-title">らくとく</div>
+  </div>
 </template>
 
 <script>

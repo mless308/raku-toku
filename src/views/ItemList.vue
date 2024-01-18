@@ -51,6 +51,8 @@ export default {
       const genreId = this.$route.query.genreId
       const pageNumber = this.$route.query.pageN
       const sort = this.$route.query.sort
+      const priceMin = this.$route.query.priceMin
+      const priceMax = this.$route.query.priceMax
       console.log(sort)
       this.items = []
       if (keyword || genreId) {
@@ -59,7 +61,9 @@ export default {
             keyword: keyword,
             genreId: genreId,
             page: pageNumber,
-            sort: sort
+            sort: sort,
+            priceMin: priceMin,
+            priceMax: priceMax
           }
         )
         this.pageNumberMax = Math.ceil(responseData.count / responseData.Items.length)
